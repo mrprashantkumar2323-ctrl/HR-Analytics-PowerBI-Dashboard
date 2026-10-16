@@ -1,93 +1,40 @@
-# 📊 HR Analytics Dashboard – Power BI
+# 📊 Enterprise HR Analytics Power BI Dashboard & Machine Learning Predictor
 
-An interactive **HR Analytics Dashboard** built using Microsoft Power BI to analyze employee attrition, salary, performance, satisfaction, and workforce trends.
+[![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Scikit-Learn](https://img.shields.io/badge/ML-Random%20Forest%20Classifier-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
 
-## 📷 Dashboard Preview
+An end-to-end workforce intelligence platform uniting **Power BI interactive dashboards** with **Machine Learning predictive turnover modeling**.
 
-![HR Analytics Dashboard](HR_Analytics_Dashboard.png)
+---
 
-## 📌 Project Overview
+## 📌 Repository Contents
+1. **Interactive Power BI Template (`HR ANALYTICS DASHBOARD -1.pbit`)**:
+   - Executive Summary, Attrition Deep-Dive, Departmental Headcount, and Salary Equity Analysis.
+2. **Workforce Dataset (`HR_Analytics_Dataset.xlsx`)**:
+   - Comprehensive employee demographics, compensation, satisfaction ratings, and retention indicators.
+3. **Machine Learning Model (`hr_attrition_predictor.py`)**:
+   - Random Forest model evaluating key drivers of turnover (overtime, job satisfaction, salary levels, tenure).
+4. **Custom DAX Measures**:
+   - `Total Employees = COUNTROWS(Employee)`
+   - `Attrition Rate = DIVIDE(CALCULATE(COUNTROWS(Employee), Employee[Attrition]="Yes"), COUNTROWS(Employee), 0)`
+   - `Average Salary = AVERAGE(Employee[Salary])`
+   - `Overtime Attrition % = CALCULATE([Attrition Rate], Employee[Overtime]="Yes")`
 
-This project transforms HR data into meaningful business insights using Power BI.
+---
 
-The dashboard provides an interactive view of employee demographics, attrition, compensation, performance, satisfaction, and workforce trends.
+## 🚀 Quickstart
 
-## 📊 Dashboard Features
+```bash
+git clone https://github.com/mrprashantkumar2323-ctrl/HR-Analytics-PowerBI-Dashboard.git
+cd HR-Analytics-PowerBI-Dashboard
 
-### 🔹 Overview Dashboard
-- Total Employees
-- Average Salary
-- Average Satisfaction Score
-- Average Performance Rating
-- Gender Distribution
-- Monthly Hiring Trend
-- Employee Experience Distribution
-- Department-wise Employee Count
-- Performance Rating Distribution
-- Average Salary by Department
+pip install -r requirements.txt
+python hr_attrition_predictor.py
+```
 
-### 🔹 Attrition Analysis
-- Total Attrition
-- Attrition Rate
-- Active Employees
-- Average Age
-- Average Experience
-- Attrition by Gender
-- Attrition by Department
-- Attrition by Age Group
-- Attrition by Experience
-- Attrition by Performance Rating
-- Salary vs Satisfaction Analysis
-
-### 🔹 Salary & Performance Analysis
-- Total Salary
-- Average Salary
-- Highest Salary
-- Lowest Salary
-- Average Performance Rating
-- Salary by Department
-- Salary by Gender
-- Salary by Experience Group
-- Performance by Department
-- Salary vs Performance Analysis
-
-## 🛠️ Tools & Technologies
-
-- **Microsoft Power BI**
-- **DAX**
-- **Power Query**
-- **Excel**
-- **Data Cleaning & Transformation**
-- **Data Visualization**
-- **KPI Development**
-- **Interactive Slicers & Filters**
-
-## 📈 Skills Demonstrated
-
-- Data Analysis
-- HR Analytics
-- Business Intelligence
-- Dashboard Development
-- DAX Measures
-- Data Transformation
-- KPI Creation
-- Data Visualization
-- Data Storytelling
-
-## 🎯 Project Objective
-
-To develop an interactive HR Analytics dashboard that helps users understand employee attrition, salary, performance, satisfaction, demographics, and workforce trends.
-
-## 🚀 Future Improvements
-
-- Add employee-level drill-through
-- Add year-over-year HR metrics
-- Add predictive attrition analysis
-- Add advanced DAX measures
-- Improve dashboard navigation and user experience
+---
 
 ## 👨‍💻 Author
-
-**Prashant Kumar**
-
-Aspiring Data Analyst | Power BI | SQL | Python | Data Analytics
+**Prashant Kumar**  
+* [LinkedIn](https://www.linkedin.com/in/prashant-kumar-p453) • [GitHub](https://github.com/mrprashantkumar2323-ctrl)
